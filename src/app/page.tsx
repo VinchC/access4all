@@ -6,6 +6,7 @@ import { Task } from "./types";
 import { useState } from "react";
 import { tasksToDisplay } from "../data/tasks";
 import Button from "@/components/Button";
+import CarouselHome from "@/components/CarouselHome";
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[] | null>(null);
@@ -16,11 +17,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* destination of the skip navigation link */}
       <main id="maincontent">
         <h1 id="parent">To do list</h1>
         <Button onClick={displayTasks} title={"Display tasks"}></Button>
-        {/* <button id="displayTasks" className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={displayTasks}>Display tasks</button> */}
+        <CarouselHome tasks={tasks} />
         {tasks
           ? tasks.map((task, index) => (
               <TaskCard key={index} title={task.title} />
