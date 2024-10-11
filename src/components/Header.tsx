@@ -55,7 +55,7 @@ export default function Header() {
                 placeholder="Search content"
                 aria-label="Search"
               />
-              <Button title={"Search"}/>
+              <Button title={"Search"} onClick={() => {}}/>
             </form>
           </div>
         </nav>
