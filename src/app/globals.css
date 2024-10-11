@@ -1,42 +1,83 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: black;
+  --secondary-color: #d3d3d3;
+  --tertiary-color: #006400;
+  --fourth-color: #9ce69c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1 {
+  text-align: center;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.bodyClass {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+main {
+  margin: 3rem;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
+.taskLink {
+  color: var(--secondary-color);
   text-decoration: none;
+  &:hover {
+    font-weight: bolder;
+    color: var(--fourth-color);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+a.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  &:hover {
+    font-weight: bolder;
+    color: var(--tertiary-color);
   }
+}
+
+.navbar,
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-brand,
+.nav-link {
+  color: red;
+  margin: 0.5rem;
+}
+
+.form-inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: var(--secondary-color) !important;
+}
+
+nav .btn {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+  margin: 1rem;
+}
+
+/* --------------------Accessibility-------------------- */
+/* allows to "hide" the skip navigation link which is still accessible by any screen reader */
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* displays the skip navigation link when it is focused */
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
