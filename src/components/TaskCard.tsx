@@ -10,7 +10,7 @@ export default function TaskCard({ title }: { title: string }) {
           id="flexSwitchCheckDefault"
         />
         <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
-          {title}
+          <a href="#" className="taskLink">{title}</a> 
         </label>
       </div>
     </>

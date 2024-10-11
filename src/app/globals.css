@@ -18,12 +18,21 @@ main {
   margin: 3rem;
 }
 
-a {
+.taskLink {
+  color: var(--secondary-color);
   text-decoration: none;
-  color: white;
   &:hover {
-    color: var(--fourth-color);
     font-weight: bolder;
+    color: var(--fourth-color);
+  }
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  &:hover {
+    font-weight: bolder;
+    color: var(--tertiary-color);
   }
 }
 
