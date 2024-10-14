@@ -5,7 +5,7 @@ export default function TaskCard({ title }: { title: string }) {
     <>
       <div className="form-check form-switch">
         <input
-          className="form-check-input"
+          className="form-check-input task-check"
           type="checkbox"
           id="flexSwitchCheckDefault"
         />
